@@ -7,8 +7,10 @@
     "services/*",
     "packages/*"
   ],
+
   "scripts": {
     "dev:gateway": "npm run dev --workspace=@orkiva/api-gateway",
+    "dev:auth": "npm run dev --workspace=@orkiva/auth-service",
     "test": "npm run test --workspaces --if-present"
   }
 }
