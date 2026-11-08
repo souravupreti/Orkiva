@@ -1,0 +1,14 @@
+{
+  "name": "orkiva",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered general-purpose workflow automation platform",
+  "workspaces": [
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:gateway": "npm run dev --workspace=@orkiva/api-gateway",
+    "test": "npm run test --workspaces --if-present"
+  }
+}
