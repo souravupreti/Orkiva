@@ -3,6 +3,7 @@ import express from "express";
 import { env } from "./config/env.js";
 import { prisma } from "./lib/prisma.js";
 import authRoutes from "./routes/auth.routes.js";
+import organizationRoutes from "./routes/organization.routes.js";
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/organizations", organizationRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err);
